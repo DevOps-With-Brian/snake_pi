@@ -1,5 +1,5 @@
 # snake_pi
-Code running on a pi for snake room temps back up to faunadb
+Code running on a pi for snake room temps back up to faunadb.  Based initially off https://www.instructables.com/Raspberry-Pi-Tutorial-How-to-Use-the-DHT-22/ which has pin layouts and more for the sensor.
 
 # Setting Up Pre-Req's
 Ensure you have the below installed on the pi:
