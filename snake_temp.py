@@ -18,6 +18,7 @@ h,t = dht.read_retry(dht.DHT22, DHT)
 
 
 current_time = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+date = now.strftime("%Y-%m-%d")
 temp = t *1.8 + 32
 
 query = """mutation {
@@ -25,12 +26,14 @@ query = """mutation {
     data: {
           temp: %s
           time: "%s"
+          date: "%s"
         }
   ){
     temp
     time
+    date
   }
-}""" % (int(temp), current_time)
+}""" % (int(temp), current_time, date)
 
 json_data = {
     'query': query
